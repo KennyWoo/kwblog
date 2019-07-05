@@ -1,0 +1,58 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-success">
+<!--  <a class="navbar-brand" href="#">-->
+<!--    <img src="/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">-->
+<!--    Bootstrap-->
+<!--  </a>-->
+  <%= link_to root_path, class: "navbar-brand" do %>
+    <%= image_tag "bootstrap-solid.svg", width: 30, height: 30, class: "d-inline-block align-top" %>
+    Kenny Woo 博客
+  <% end %>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <%= link_to root_path, class: "nav-link" do %>
+          主页 <span class="sr-only">(current)</span>
+        <% end %>
+      </li>
+      <li class="nav-item">
+        <%= link_to "文章", articles_path, class: "nav-link" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to "读书", books_path, class: "nav-link" %>
+      </li>
+      <li class="nav-item dropdown">
+<!--        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
+<!--          教程-->
+<!--        </a>-->
+        <%= link_to "教程", tutorials_path, class: "nav-link dropdown-toggle", id: "navbarDropdown", role: "button" %>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Java</a>
+          <a class="dropdown-item" href="#">Ruby</a>
+          <a class="dropdown-item" href="#">Android</a>
+          <a class="dropdown-item" href="#">IOS/Swift</a>
+          <a class="dropdown-item" href="#">Rust</a>
+          <a class="dropdown-item" href="#">Groovy</a>
+          <a class="dropdown-item" href="#">Scala</a>
+          <a class="dropdown-item" href="#">HTML</a>
+          <a class="dropdown-item" href="#">CSS</a>
+          <a class="dropdown-item" href="#">Javascript</a>
+          <a class="dropdown-item" href="#">Angular</a>
+          <a class="dropdown-item" href="#">React-Native</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Others</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <%= link_to "问答", books_path, class: "nav-link" %>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>

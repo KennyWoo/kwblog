@@ -1,0 +1,2 @@
+class TutorialCategory < ApplicationRecord
+end
